@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dpmn7unl1x0wy"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 577.0
+offset_bottom = 150.0
+text = "HINDI LETTERS ो्ेकिोर्तेोिरते्किो्ेिचतकोरतुकोे"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundManager" type="Node2D" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+offset_top = 271.0
+offset_right = 577.0
+offset_bottom = 1024.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button2" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button3" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="Control/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button5" type="Button" parent="Control/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button6" type="Button" parent="Control/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="Control/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button8" type="Button" parent="Control/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button9" type="Button" parent="Control/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button10" type="Button" parent="Control/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button11" type="Button" parent="Control/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button12" type="Button" parent="Control/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button13" type="Button" parent="Control/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button14" type="Button" parent="Control/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
+
+[node name="Button15" type="Button" parent="Control/HBoxContainer/VBoxContainer5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "रोे्ि"
