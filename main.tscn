@@ -1,115 +1,445 @@
-[gd_scene format=3 uid="uid://dpmn7unl1x0wy"]
+[gd_scene load_steps=22 format=3 uid="uid://dpmn7unl1x0wy"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_3jo4y"]
+[ext_resource type="Texture2D" uid="uid://bv6a1w87d3sqo" path="res://rm222-mind-14.jpg" id="1_fmdpg"]
+[ext_resource type="Theme" uid="uid://c1i1lpmxe1tms" path="res://button_theme.tres" id="1_vx1vk"]
+[ext_resource type="Texture2D" uid="uid://esgicsdnujl2" path="res://Button.png" id="3_76cuu"]
+[ext_resource type="Texture2D" uid="uid://1k44ieglea1f" path="res://button_hover.png" id="3_jd0tb"]
+[ext_resource type="PackedScene" uid="uid://bpukkp2kq1j60" path="res://sound_manager.tscn" id="3_ti0ct"]
+[ext_resource type="Texture2D" uid="uid://buw4tqrvs7cl5" path="res://button_pressed.png" id="5_nkw0o"]
+
+[sub_resource type="Animation" id="Animation_dpm18"]
+resource_name = "switch_to_vowels"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainControl:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-1040, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nt8ix"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainControl:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d4ioa"]
+resource_name = "switch_to_consonants"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainControl:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1040, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wwmjy"]
+_data = {
+"RESET": SubResource("Animation_nt8ix"),
+"switch_to_consonants": SubResource("Animation_d4ioa"),
+"switch_to_vowels": SubResource("Animation_dpm18")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmhpd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_30xgo"]
+texture = ExtResource("3_jd0tb")
+region_rect = Rect2(401, 972, 181, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvkp2"]
+texture = ExtResource("3_76cuu")
+region_rect = Rect2(401, 972, 181, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a4sd6"]
+texture = ExtResource("5_nkw0o")
+region_rect = Rect2(363, 882, 164, 171)
+
+[sub_resource type="Theme" id="Theme_74g6i"]
+Button/styles/focus = SubResource("StyleBoxEmpty_wmhpd")
+Button/styles/hover = SubResource("StyleBoxTexture_30xgo")
+Button/styles/normal = SubResource("StyleBoxTexture_xvkp2")
+Button/styles/pressed = SubResource("StyleBoxTexture_a4sd6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35pmt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34mpt"]
+texture = ExtResource("3_jd0tb")
+region_rect = Rect2(401, 1190, 181, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8tmfb"]
+texture = ExtResource("3_76cuu")
+region_rect = Rect2(401, 1190, 181, 190)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5m0ek"]
+texture = ExtResource("5_nkw0o")
+region_rect = Rect2(363, 1079, 164, 172)
+
+[sub_resource type="Theme" id="Theme_4ai5w"]
+Button/styles/focus = SubResource("StyleBoxEmpty_35pmt")
+Button/styles/hover = SubResource("StyleBoxTexture_34mpt")
+Button/styles/normal = SubResource("StyleBoxTexture_8tmfb")
+Button/styles/pressed = SubResource("StyleBoxTexture_5m0ek")
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_3jo4y")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 577.0
-offset_bottom = 150.0
-text = "HINDI LETTERS ो्ेकिोर्तेोिरते्किो्ेिचतकोरतुकोे"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Rm222-mind-14" type="Sprite2D" parent="."]
+position = Vector2(519, 306)
+rotation = 1.5708
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("1_fmdpg")
 
-[node name="SoundManager" type="Node2D" parent="."]
+[node name="SoundManager" parent="." instance=ExtResource("3_ti0ct")]
 
-[node name="Control" type="Control" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wwmjy")
+}
+
+[node name="MainControl" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="ConsonantsControl" type="Control" parent="MainControl"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1027.0
+offset_bottom = 574.0
+
+[node name="RightButton" type="Button" parent="MainControl/ConsonantsControl"]
 layout_mode = 1
-offset_top = 271.0
-offset_right = 577.0
-offset_bottom = 1024.0
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -138.0
+offset_top = -26.0
+offset_right = -79.0
+offset_bottom = 26.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme = SubResource("Theme_74g6i")
+text = " "
+
+[node name="ConsonantsVBox" type="VBoxContainer" parent="MainControl/ConsonantsControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -402.5
+offset_top = -159.0
+offset_right = 403.5
+offset_bottom = 209.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
+layout_mode = 2
+theme = ExtResource("1_vx1vk")
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HBoxContainer"]
+[node name="कButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
+text = "क"
 
-[node name="Button" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="Button2" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+[node name="Button3" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="Button3" type="Button" parent="Control/HBoxContainer/VBoxContainer"]
+[node name="Button4" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Control/HBoxContainer"]
+[node name="Button5" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
+text = "क"
 
-[node name="Button4" type="Button" parent="Control/HBoxContainer/VBoxContainer2"]
+[node name="Button6" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="Button5" type="Button" parent="Control/HBoxContainer/VBoxContainer2"]
+[node name="Button7" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="Button6" type="Button" parent="Control/HBoxContainer/VBoxContainer2"]
+[node name="Button8" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Control/HBoxContainer"]
+[node name="Button9" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
+text = "क"
 
-[node name="Button7" type="Button" parent="Control/HBoxContainer/VBoxContainer3"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+theme = ExtResource("1_vx1vk")
+alignment = 1
 
-[node name="Button8" type="Button" parent="Control/HBoxContainer/VBoxContainer3"]
+[node name="Button" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="Button9" type="Button" parent="Control/HBoxContainer/VBoxContainer3"]
+[node name="Button2" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="Control/HBoxContainer"]
+[node name="Button3" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
+text = "क"
 
-[node name="Button10" type="Button" parent="Control/HBoxContainer/VBoxContainer4"]
+[node name="Button4" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="Button11" type="Button" parent="Control/HBoxContainer/VBoxContainer4"]
+[node name="Button5" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="Button12" type="Button" parent="Control/HBoxContainer/VBoxContainer4"]
+[node name="Button6" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="Control/HBoxContainer"]
+[node name="Button7" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
+text = "क"
 
-[node name="Button13" type="Button" parent="Control/HBoxContainer/VBoxContainer5"]
+[node name="Button8" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="Button14" type="Button" parent="Control/HBoxContainer/VBoxContainer5"]
+[node name="Button9" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+text = "क"
 
-[node name="Button15" type="Button" parent="Control/HBoxContainer/VBoxContainer5"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 64
-text = "रोे्ि"
+theme = ExtResource("1_vx1vk")
+alignment = 1
+
+[node name="Button" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+layout_mode = 2
+text = "क"
+
+[node name="Button2" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+layout_mode = 2
+text = "क"
+
+[node name="Button3" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+layout_mode = 2
+text = "क"
+
+[node name="Button4" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+layout_mode = 2
+text = "क"
+
+[node name="Button5" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+layout_mode = 2
+text = "क"
+
+[node name="Button6" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+layout_mode = 2
+text = "क"
+
+[node name="Button7" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+layout_mode = 2
+text = "क"
+
+[node name="Button8" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+layout_mode = 2
+text = "क"
+
+[node name="Button9" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+layout_mode = 2
+text = "क"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
+layout_mode = 2
+theme = ExtResource("1_vx1vk")
+alignment = 1
+
+[node name="Button" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+layout_mode = 2
+text = "क"
+
+[node name="Button2" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+layout_mode = 2
+text = "क"
+
+[node name="Button3" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+layout_mode = 2
+text = "क"
+
+[node name="Button4" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+layout_mode = 2
+text = "क"
+
+[node name="Button5" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+layout_mode = 2
+text = "क"
+
+[node name="Button6" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+layout_mode = 2
+text = "क"
+
+[node name="Button7" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+layout_mode = 2
+text = "क"
+
+[node name="Button8" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+layout_mode = 2
+text = "क"
+
+[node name="Button9" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+layout_mode = 2
+text = "क"
+
+[node name="ConsonantsLabel" type="Label" parent="MainControl/ConsonantsControl"]
+layout_mode = 0
+offset_right = 1028.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "CONSONANTS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VowelControl" type="Control" parent="MainControl"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1026.0
+offset_right = 2053.0
+offset_bottom = 574.0
+
+[node name="LeftButton" type="Button" parent="MainControl/VowelControl"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = -26.0
+offset_right = 98.0
+offset_bottom = 26.0
+grow_vertical = 2
+scale = Vector2(2, 2)
+theme = SubResource("Theme_4ai5w")
+text = " "
+
+[node name="ConsonantsVBox" type="VBoxContainer" parent="MainControl/VowelControl"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -403.0
+offset_top = -51.0
+offset_right = 403.0
+offset_bottom = 131.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainControl/VowelControl/ConsonantsVBox"]
+layout_mode = 2
+theme = ExtResource("1_vx1vk")
+alignment = 1
+
+[node name="Button" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+layout_mode = 2
+text = "क"
+
+[node name="Button2" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+layout_mode = 2
+text = "क"
+
+[node name="Button3" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+layout_mode = 2
+text = "क"
+
+[node name="Button4" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+layout_mode = 2
+text = "क"
+
+[node name="Button5" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+layout_mode = 2
+text = "क"
+
+[node name="Button6" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+layout_mode = 2
+text = "क"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MainControl/VowelControl/ConsonantsVBox"]
+layout_mode = 2
+theme = ExtResource("1_vx1vk")
+alignment = 1
+
+[node name="Button" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+layout_mode = 2
+text = "क"
+
+[node name="Button2" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+layout_mode = 2
+text = "क"
+
+[node name="Button3" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+layout_mode = 2
+text = "क"
+
+[node name="Button4" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+layout_mode = 2
+text = "क"
+
+[node name="Button5" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+layout_mode = 2
+text = "क"
+
+[node name="Button6" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+layout_mode = 2
+text = "क"
+
+[node name="Button7" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+layout_mode = 2
+text = "क"
+
+[node name="VowelsLabel" type="Label" parent="MainControl/VowelControl"]
+layout_mode = 0
+offset_right = 1028.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "VOWELS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="MainControl/ConsonantsControl/RightButton" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer/कButton" to="SoundManager" method="_on_कbutton_pressed"]
+[connection signal="pressed" from="MainControl/VowelControl/LeftButton" to="." method="_on_left_button_pressed"]
