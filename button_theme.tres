@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=6 format=3 uid="uid://c1i1lpmxe1tms"]
 
-[ext_resource type="FontFile" uid="uid://b2w0w22qbxaia" path="res://Mangal Regular.ttf" id="1_ce2tl"]
+[ext_resource type="FontFile" uid="uid://bxxdvslfmjhr6" path="res://Kruti Dev 010 Regular.ttf" id="1_u0sjd"]
 [ext_resource type="StyleBox" uid="uid://haxijhqasnx2" path="res://button_normal.tres" id="2_eal7n"]
 [ext_resource type="StyleBox" uid="uid://6g8jo6v5os16" path="res://button_hover.tres" id="2_gk48y"]
 [ext_resource type="StyleBox" uid="uid://ck3mscijhumwu" path="res://button_pressed.tres" id="4_jlyyd"]
@@ -15,7 +15,7 @@ Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 Button/colors/font_outline_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 46
-Button/fonts/font = ExtResource("1_ce2tl")
+Button/fonts/font = ExtResource("1_u0sjd")
 Button/styles/focus = SubResource("StyleBoxEmpty_fgcit")
 Button/styles/hover = ExtResource("2_gk48y")
 Button/styles/normal = ExtResource("2_eal7n")

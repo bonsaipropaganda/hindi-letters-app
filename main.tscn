@@ -168,160 +168,169 @@ alignment = 1
 layout_mode = 2
 text = "क"
 
-[node name="Button2" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
+[node name="खButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "ख"
 
-[node name="Button3" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
+[node name="गButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "ग"
 
-[node name="Button4" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
+[node name="घButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "घ"
 
-[node name="Button5" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
+[node name="ङButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "ङ"
 
-[node name="Button6" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
+[node name="चButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "च"
 
-[node name="Button7" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
+[node name="छButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "छ"
 
-[node name="Button8" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
+[node name="जButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "ज"
 
-[node name="Button9" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
+[node name="झButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "झ"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
 layout_mode = 2
 theme = ExtResource("1_vx1vk")
 alignment = 1
 
-[node name="Button" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
+[node name="ञButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ञ"
 
-[node name="Button2" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
+[node name="टButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ट"
 
-[node name="Button3" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
+[node name="ठButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ठ"
 
-[node name="Button4" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
+[node name="डButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ड"
 
-[node name="Button5" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
+[node name="ढButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ढ"
 
-[node name="Button6" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
+[node name="णButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ण"
 
-[node name="Button7" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
+[node name="तButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "त"
 
-[node name="Button8" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
+[node name="थButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "थ"
 
-[node name="Button9" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
+[node name="दButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "द"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
 layout_mode = 2
 theme = ExtResource("1_vx1vk")
 alignment = 1
 
-[node name="Button" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+[node name="धButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
-text = "क"
+text = "ध"
 
-[node name="Button2" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+[node name="नButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
-text = "क"
+text = "न"
 
-[node name="Button3" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+[node name="पButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
-text = "क"
+text = "प"
 
-[node name="Button4" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+[node name="फButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
-text = "क"
+text = "फ"
 
-[node name="Button5" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+[node name="बButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
-text = "क"
+text = "ब"
 
-[node name="Button6" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+[node name="भButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
-text = "क"
+text = "भ"
 
-[node name="Button7" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+[node name="मButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
-text = "क"
+text = "म"
 
-[node name="Button8" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+[node name="यButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
-text = "क"
+text = "य"
 
-[node name="Button9" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
+[node name="रButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
-text = "क"
+text = "र"
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
 layout_mode = 2
 theme = ExtResource("1_vx1vk")
 alignment = 1
 
-[node name="Button" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+[node name="लButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
-text = "क"
+text = "ल"
 
-[node name="Button2" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+[node name="वButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
-text = "क"
+text = "व"
 
-[node name="Button3" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+[node name="शButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
-text = "क"
+text = "श"
 
-[node name="Button4" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+[node name="षButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
-text = "क"
+text = "ष"
 
-[node name="Button5" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+[node name="सButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
-text = "क"
+text = "स"
 
-[node name="Button6" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+[node name="हButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
-text = "क"
+text = "ह"
 
-[node name="Button7" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+[node name="क्षButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
-text = "क"
+text = "क्ष"
 
-[node name="Button8" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+[node name="त्रButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
-text = "क"
+text = "त्र"
 
-[node name="Button9" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
+[node name="ज्ञButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
-text = "क"
+text = "ज्ञ"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
+layout_mode = 2
+theme = ExtResource("1_vx1vk")
+alignment = 1
+
+[node name="श्रButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer5"]
+layout_mode = 2
+text = "श्र"
 
 [node name="ConsonantsLabel" type="Label" parent="MainControl/ConsonantsControl"]
 layout_mode = 0
@@ -389,46 +398,46 @@ text = "इ"
 layout_mode = 2
 text = "ई"
 
-[node name="Button5" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+[node name="उButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "उ"
 
-[node name="Button6" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+[node name="ऊButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "ऊ"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MainControl/VowelControl/ConsonantsVBox"]
 layout_mode = 2
 theme = ExtResource("1_vx1vk")
 alignment = 1
 
-[node name="Button" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+[node name="एButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ए"
 
-[node name="Button2" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+[node name="ऐButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ऐ"
 
-[node name="Button3" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+[node name="ओButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ओ"
 
-[node name="Button4" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+[node name="औButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "औ"
 
-[node name="Button5" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+[node name="अंButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "अं"
 
-[node name="Button6" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+[node name="अ_Button" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "अ%"
 
-[node name="Button7" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+[node name="ऋButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
-text = "क"
+text = "ऋ"
 
 [node name="VowelsLabel" type="Label" parent="MainControl/VowelControl"]
 layout_mode = 0
