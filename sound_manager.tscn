@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bpukkp2kq1j60"]
+[gd_scene load_steps=3 format=3 uid="uid://bpukkp2kq1j60"]
 
 [ext_resource type="Script" path="res://sound_manager.gd" id="1_kvacv"]
+[ext_resource type="AudioStream" uid="uid://dav7ykok4xxv7" path="res://audio/Voiceless_velar_plosive.wav" id="2_pynoc"]
 
 [node name="SoundManager" type="Node2D"]
 script = ExtResource("1_kvacv")
 
 [node name="क" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_pynoc")

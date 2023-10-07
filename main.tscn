@@ -373,21 +373,21 @@ layout_mode = 2
 theme = ExtResource("1_vx1vk")
 alignment = 1
 
-[node name="Button" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+[node name="अButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "अ"
 
-[node name="Button2" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+[node name="आButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "आ"
 
-[node name="Button3" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+[node name="इButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "इ"
 
-[node name="Button4" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
+[node name="ईButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
-text = "क"
+text = "ई"
 
 [node name="Button5" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
