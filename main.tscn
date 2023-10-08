@@ -99,6 +99,7 @@ texture = ExtResource("5_nkw0o")
 expand_margin_left = 1.0
 expand_margin_top = 1.0
 expand_margin_right = 1.0
+expand_margin_bottom = 1.0
 region_rect = Rect2(363, 1079, 164, 172)
 
 [sub_resource type="Theme" id="Theme_7ox4r"]
@@ -403,6 +404,10 @@ layout_mode = 2
 theme = ExtResource("1_vx1vk")
 alignment = 1
 
+[node name="ऋButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+layout_mode = 2
+text = "ऋ"
+
 [node name="एButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "ए"
@@ -426,10 +431,6 @@ text = "अं"
 [node name="अ_Button" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "अ%"
-
-[node name="ऋButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
-layout_mode = 2
-text = "ऋ"
 
 [node name="VowelsLabel" type="Label" parent="MainControl/VowelControl"]
 layout_mode = 0
