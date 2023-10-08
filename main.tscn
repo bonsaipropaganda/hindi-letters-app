@@ -60,45 +60,52 @@ _data = {
 "switch_to_vowels": SubResource("Animation_dpm18")
 }
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmhpd"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7gldn"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_30xgo"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u0mdt"]
 texture = ExtResource("3_jd0tb")
 region_rect = Rect2(401, 972, 181, 190)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xvkp2"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v16x3"]
 texture = ExtResource("3_76cuu")
 region_rect = Rect2(401, 972, 181, 190)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a4sd6"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bdfv"]
 texture = ExtResource("5_nkw0o")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
 region_rect = Rect2(363, 882, 164, 171)
 
-[sub_resource type="Theme" id="Theme_74g6i"]
-Button/styles/focus = SubResource("StyleBoxEmpty_wmhpd")
-Button/styles/hover = SubResource("StyleBoxTexture_30xgo")
-Button/styles/normal = SubResource("StyleBoxTexture_xvkp2")
-Button/styles/pressed = SubResource("StyleBoxTexture_a4sd6")
+[sub_resource type="Theme" id="Theme_b354v"]
+Button/styles/focus = SubResource("StyleBoxEmpty_7gldn")
+Button/styles/hover = SubResource("StyleBoxTexture_u0mdt")
+Button/styles/normal = SubResource("StyleBoxTexture_v16x3")
+Button/styles/pressed = SubResource("StyleBoxTexture_6bdfv")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35pmt"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ijp0h"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_34mpt"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ple54"]
 texture = ExtResource("3_jd0tb")
 region_rect = Rect2(401, 1190, 181, 190)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8tmfb"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_62hfx"]
 texture = ExtResource("3_76cuu")
 region_rect = Rect2(401, 1190, 181, 190)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5m0ek"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24fty"]
 texture = ExtResource("5_nkw0o")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
 region_rect = Rect2(363, 1079, 164, 172)
 
-[sub_resource type="Theme" id="Theme_4ai5w"]
-Button/styles/focus = SubResource("StyleBoxEmpty_35pmt")
-Button/styles/hover = SubResource("StyleBoxTexture_34mpt")
-Button/styles/normal = SubResource("StyleBoxTexture_8tmfb")
-Button/styles/pressed = SubResource("StyleBoxTexture_5m0ek")
+[sub_resource type="Theme" id="Theme_7ox4r"]
+Button/styles/focus = SubResource("StyleBoxEmpty_ijp0h")
+Button/styles/hover = SubResource("StyleBoxTexture_ple54")
+Button/styles/normal = SubResource("StyleBoxTexture_62hfx")
+Button/styles/pressed = SubResource("StyleBoxTexture_24fty")
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_3jo4y")
@@ -127,23 +134,6 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1027.0
 offset_bottom = 574.0
-
-[node name="RightButton" type="Button" parent="MainControl/ConsonantsControl"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -138.0
-offset_top = -26.0
-offset_right = -79.0
-offset_bottom = 26.0
-grow_horizontal = 0
-grow_vertical = 2
-scale = Vector2(2, 2)
-theme = SubResource("Theme_74g6i")
-text = " "
 
 [node name="ConsonantsVBox" type="VBoxContainer" parent="MainControl/ConsonantsControl"]
 layout_mode = 1
@@ -342,26 +332,28 @@ text = "CONSONANTS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="RightButton" type="Button" parent="MainControl/ConsonantsControl"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -51.9999
+offset_right = -110.0
+offset_bottom = -43.9999
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(11, 11)
+theme = SubResource("Theme_b354v")
+
 [node name="VowelControl" type="Control" parent="MainControl"]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1026.0
 offset_right = 2053.0
 offset_bottom = 574.0
-
-[node name="LeftButton" type="Button" parent="MainControl/VowelControl"]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 39.0
-offset_top = -26.0
-offset_right = 98.0
-offset_bottom = 26.0
-grow_vertical = 2
-scale = Vector2(2, 2)
-theme = SubResource("Theme_4ai5w")
-text = " "
 
 [node name="ConsonantsVBox" type="VBoxContainer" parent="MainControl/VowelControl"]
 layout_mode = 1
@@ -449,6 +441,15 @@ text = "VOWELS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="MainControl/ConsonantsControl/RightButton" to="." method="_on_right_button_pressed"]
+[node name="LeftButton" type="Button" parent="MainControl/VowelControl"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 235.0
+offset_right = 46.0
+offset_bottom = 243.0
+scale = Vector2(11, 11)
+theme = SubResource("Theme_7ox4r")
+
 [connection signal="pressed" from="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer/कButton" to="SoundManager" method="_on_कbutton_pressed"]
+[connection signal="pressed" from="MainControl/ConsonantsControl/RightButton" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="MainControl/VowelControl/LeftButton" to="." method="_on_left_button_pressed"]
