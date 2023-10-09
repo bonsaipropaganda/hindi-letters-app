@@ -57,150 +57,200 @@ script = ExtResource("1_kvacv")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_uf7ud")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_pbunq")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_yqm68")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_8a8l3")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D5" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_r8de2")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D6" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_rca1w")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D7" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_je7d2")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D8" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_0ig5n")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D9" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_vgerq")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D10" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_46a2i")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D11" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_ivybd")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D12" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_20aj1")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D13" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("14_8vqh5")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D14" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_d5d0k")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D15" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("16_b78co")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D16" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_w28mf")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D17" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("18_rqndj")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D18" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_d7ymu")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D19" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("20_spsen")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D20" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("21_4322i")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D21" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("22_n3d10")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D22" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("23_cmcap")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D23" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("24_dvt3i")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D24" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("25_seiv2")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D25" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("26_u5pwf")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D26" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("27_2pc2v")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D27" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("28_r2gpr")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D28" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("29_ofgp8")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D29" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("30_7xgk6")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D30" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("31_vkb8p")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D31" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("32_jmd23")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D32" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("33_4ph4e")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D33" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("34_ux2kh")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D34" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("35_cag7i")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D35" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("36_y5yjm")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D36" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("37_bjdet")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D37" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("38_pf8mg")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D38" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("39_44l6i")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D39" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("40_d8nl8")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D40" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("41_d8p76")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D41" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("42_6e46q")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D42" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("43_wtx18")
+volume_db = 5.0
 
 [node name="AudioStreamPlayer2D43" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("44_idu0q")
+volume_db = 14.0
 
 [node name="AudioStreamPlayer2D44" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("45_kw6i1")
+volume_db = 14.0
 
 [node name="AudioStreamPlayer2D45" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("46_kx06h")
+volume_db = 14.0
 
 [node name="AudioStreamPlayer2D46" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("47_ukdme")
+volume_db = 14.0
 
 [node name="AudioStreamPlayer2D47" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("48_ad4t6")
+volume_db = 14.0
 
 [node name="AudioStreamPlayer2D48" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("49_apva5")
+volume_db = 14.0
 
 [node name="AudioStreamPlayer2D49" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("50_ycofv")
+volume_db = 14.0
 
 [node name="AudioStreamPlayer2D50" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("51_po4tm")
+volume_db = 14.0
