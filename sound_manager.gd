@@ -52,3 +52,95 @@ extends Node2D
 
 func _on_अbutton_pressed():
 	audio_stream_player_1.play()
+
+
+func _on_आbutton_pressed():
+	audio_stream_player_2.play()
+
+
+func _on_इbutton_pressed():
+	audio_stream_player_3.play()
+
+
+func _on_ईbutton_pressed():
+	audio_stream_player_4.play()
+
+
+func _on_उbutton_pressed():
+	audio_stream_player_5.play()
+
+
+func _on_ऊbutton_pressed():
+	audio_stream_player_6.play()
+
+
+func _on_एbutton_pressed():
+	audio_stream_player_7.play()
+
+
+func _on_ऐbutton_pressed():
+	audio_stream_player_8.play()
+
+
+func _on_ओbutton_pressed():
+	audio_stream_player_9.play()
+
+
+func _on_औbutton_pressed():
+	audio_stream_player_10.play()
+
+
+func _on_अंbutton_pressed():
+	audio_stream_player_11.play()
+
+
+func _on_अ_button_pressed():
+	audio_stream_player_12.play()
+
+
+func _on_ऋbutton_pressed():
+	audio_stream_player_13.play()
+
+
+func _on_कbutton_pressed():
+	audio_stream_player_14.play()
+
+
+func _on_खbutton_pressed():
+	audio_stream_player_15.play()
+
+
+func _on_गbutton_pressed():
+	audio_stream_player_16.play()
+
+
+func _on_घbutton_pressed():
+	audio_stream_player_17.play()
+
+
+func _on_ङbutton_pressed():
+	audio_stream_player_18.play()
+
+
+func _on_चbutton_pressed():
+	audio_stream_player_19.play()
+
+
+func _on_छbutton_pressed():
+	audio_stream_player_20.play()
+
+
+func _on_जbutton_pressed():
+	audio_stream_player_21.play()
+
+
+func _on_झbutton_pressed():
+	audio_stream_player_22.play()
+
+
+func _on_ञbutton_pressed():
+	audio_stream_player_23.play()
+
+
+func _on_टbutton_pressed():
+	audio_stream_player_24.play()
