@@ -144,3 +144,91 @@ func _on_ञbutton_pressed():
 
 func _on_टbutton_pressed():
 	audio_stream_player_24.play()
+
+
+func _on_ठbutton_pressed():
+	audio_stream_player_25.play()
+
+
+func _on_डbutton_pressed():
+	audio_stream_player_26.play()
+
+
+func _on_ढbutton_pressed():
+	audio_stream_player_27.play()
+
+
+func _on_णbutton_pressed():
+	audio_stream_player_28.play()
+
+
+func _on_तbutton_pressed():
+	audio_stream_player_29.play()
+
+
+func _on_थbutton_pressed():
+	audio_stream_player_30.play()
+
+
+func _on_दbutton_pressed():
+	audio_stream_player_31.play()
+
+
+func _on_धbutton_pressed():
+	audio_stream_player_32.play()
+
+
+func _on_नbutton_pressed():
+	audio_stream_player_33.play()
+
+
+func _on_पbutton_pressed():
+	audio_stream_player_34.play()
+
+
+func _on_फbutton_pressed():
+	audio_stream_player_35.play()
+
+
+func _on_बbutton_pressed():
+	audio_stream_player_36.play()
+
+
+func _on_भbutton_pressed():
+	audio_stream_player_37.play()
+
+
+func _on_मbutton_pressed():
+	audio_stream_player_38.play()
+
+
+func _on_यbutton_pressed():
+	audio_stream_player_39.play()
+
+
+func _on_रbutton_pressed():
+	audio_stream_player_40.play()
+
+
+func _on_लbutton_pressed():
+	audio_stream_player_41.play()
+
+
+func _on_वbutton_pressed():
+	audio_stream_player_42.play()
+
+
+func _on_शbutton_pressed():
+	audio_stream_player_43.play()
+
+
+func _on_षbutton_pressed():
+	audio_stream_player_44.play()
+
+
+func _on_सbutton_pressed():
+	audio_stream_player_45.play()
+
+
+func _on_हbutton_pressed():
+	audio_stream_player_46.play()
