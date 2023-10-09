@@ -46,6 +46,10 @@ extends Node2D
 @onready var audio_stream_player_44 = $AudioStreamPlayer2D44
 @onready var audio_stream_player_45 = $AudioStreamPlayer2D45
 @onready var audio_stream_player_46 = $AudioStreamPlayer2D46
+@onready var audio_stream_player_47 = $AudioStreamPlayer2D47
+@onready var audio_stream_player_48 = $AudioStreamPlayer2D48
+@onready var audio_stream_player_49 = $AudioStreamPlayer2D49
+@onready var audio_stream_player_50 = $AudioStreamPlayer2D50
 
 
 
@@ -232,3 +236,19 @@ func _on_सbutton_pressed():
 
 func _on_हbutton_pressed():
 	audio_stream_player_46.play()
+
+
+func _on_क्षbutton_pressed():
+	audio_stream_player_47.play()
+
+
+func _on_त्रbutton_pressed():
+	audio_stream_player_48.play()
+
+
+func _on_ज्ञbutton_pressed():
+	audio_stream_player_49.play()
+
+
+func _on_श्रbutton_pressed():
+	audio_stream_player_50.play()
