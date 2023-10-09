@@ -404,10 +404,6 @@ layout_mode = 2
 theme = ExtResource("1_vx1vk")
 alignment = 1
 
-[node name="ऋButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
-layout_mode = 2
-text = "ऋ"
-
 [node name="एButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "ए"
@@ -432,6 +428,10 @@ text = "अं"
 layout_mode = 2
 text = "अ%"
 
+[node name="ऋButton" type="Button" parent="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2"]
+layout_mode = 2
+text = "ऋ"
+
 [node name="VowelsLabel" type="Label" parent="MainControl/VowelControl"]
 layout_mode = 0
 offset_right = 1028.0
@@ -453,4 +453,5 @@ theme = SubResource("Theme_7ox4r")
 
 [connection signal="pressed" from="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer/कButton" to="SoundManager" method="_on_कbutton_pressed"]
 [connection signal="pressed" from="MainControl/ConsonantsControl/RightButton" to="." method="_on_right_button_pressed"]
+[connection signal="pressed" from="MainControl/VowelControl/ConsonantsVBox/HBoxContainer/अButton" to="SoundManager" method="_on_अbutton_pressed"]
 [connection signal="pressed" from="MainControl/VowelControl/LeftButton" to="." method="_on_left_button_pressed"]
