@@ -100,7 +100,7 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
-"method": &"reset_vowels"
+"method": &"reset_consonants"
 }]
 }
 
@@ -594,4 +594,4 @@ theme = SubResource("Theme_7ox4r")
 [connection signal="pressed" from="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2/अ_Button" to="SoundManager" method="_on_अ_button_pressed"]
 [connection signal="pressed" from="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2/ऋButton" to="SoundManager" method="_on_ऋbutton_pressed"]
 [connection signal="pressed" from="MainControl/VowelControl/LeftButton" to="." method="_on_left_button_pressed"]
-[connection signal="pressed" from="MainControl/VowelControl/LeftButton" to="MainControl/VowelControl/ConsonantsVBox" method="_on_left_button_pressed"]
+[connection signal="pressed" from="MainControl/VowelControl/LeftButton" to="MainControl/VowelControl/ConsonantsVBox" method="_on_right_button_pressed"]
