@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dpmn7unl1x0wy"]
+[gd_scene load_steps=24 format=3 uid="uid://dpmn7unl1x0wy"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_3jo4y"]
 [ext_resource type="Texture2D" uid="uid://bv6a1w87d3sqo" path="res://rm222-mind-14.jpg" id="1_fmdpg"]
@@ -8,8 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bpukkp2kq1j60" path="res://sound_manager.tscn" id="3_ti0ct"]
 [ext_resource type="Script" path="res://consonants_vbox.gd" id="4_pfplb"]
 [ext_resource type="Texture2D" uid="uid://buw4tqrvs7cl5" path="res://button_pressed.png" id="5_nkw0o"]
-[ext_resource type="Script" path="res://button.gd" id="6_8b1tk"]
-[ext_resource type="Script" path="res://vowels_vbox.gd" id="10_mqnc5"]
+[ext_resource type="Script" path="res://button_container.gd" id="6_xd7uj"]
 
 [sub_resource type="Animation" id="Animation_nt8ix"]
 length = 0.001
@@ -50,20 +49,6 @@ tracks/1/keys = {
 "points": PackedFloat32Array(),
 "times": PackedFloat32Array()
 }
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("MainControl/ConsonantsControl/ConsonantsVBox")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"reset_consonants"
-}]
-}
 
 [sub_resource type="Animation" id="Animation_dpm18"]
 resource_name = "switch_to_vowels"
@@ -88,20 +73,6 @@ tracks/1/keys = {
 "handle_modes": PackedInt32Array(),
 "points": PackedFloat32Array(),
 "times": PackedFloat32Array()
-}
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("MainControl/VowelControl/ConsonantsVBox")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"reset_vowels"
-}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wwmjy"]
@@ -206,51 +177,43 @@ script = ExtResource("4_pfplb")
 layout_mode = 2
 theme = ExtResource("1_vx1vk")
 alignment = 1
+script = ExtResource("6_xd7uj")
 
 [node name="कButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
 text = "क"
-script = ExtResource("6_8b1tk")
 
 [node name="खButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
 text = "ख"
-script = ExtResource("6_8b1tk")
 
 [node name="गButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
 text = "ग"
-script = ExtResource("6_8b1tk")
 
 [node name="घButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
 text = "घ"
-script = ExtResource("6_8b1tk")
 
 [node name="ङButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
 text = "ङ"
-script = ExtResource("6_8b1tk")
 
 [node name="चButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
 text = "च"
-script = ExtResource("6_8b1tk")
 
 [node name="छButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
 text = "छ"
-script = ExtResource("6_8b1tk")
 
 [node name="जButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
 text = "ज"
-script = ExtResource("6_8b1tk")
 
 [node name="झButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer"]
 layout_mode = 2
 text = "झ"
-script = ExtResource("6_8b1tk")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
 layout_mode = 2
@@ -260,47 +223,38 @@ alignment = 1
 [node name="ञButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "ञ"
-script = ExtResource("6_8b1tk")
 
 [node name="टButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "ट"
-script = ExtResource("6_8b1tk")
 
 [node name="ठButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "ठ"
-script = ExtResource("6_8b1tk")
 
 [node name="डButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "ड"
-script = ExtResource("6_8b1tk")
 
 [node name="ढButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "ढ"
-script = ExtResource("6_8b1tk")
 
 [node name="णButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "ण"
-script = ExtResource("6_8b1tk")
 
 [node name="तButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "त"
-script = ExtResource("6_8b1tk")
 
 [node name="थButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "थ"
-script = ExtResource("6_8b1tk")
 
 [node name="दButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer2"]
 layout_mode = 2
 text = "द"
-script = ExtResource("6_8b1tk")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
 layout_mode = 2
@@ -310,47 +264,38 @@ alignment = 1
 [node name="धButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
 text = "ध"
-script = ExtResource("6_8b1tk")
 
 [node name="नButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
 text = "न"
-script = ExtResource("6_8b1tk")
 
 [node name="पButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
 text = "प"
-script = ExtResource("6_8b1tk")
 
 [node name="फButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
 text = "फ"
-script = ExtResource("6_8b1tk")
 
 [node name="बButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
 text = "ब"
-script = ExtResource("6_8b1tk")
 
 [node name="भButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
 text = "भ"
-script = ExtResource("6_8b1tk")
 
 [node name="मButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
 text = "म"
-script = ExtResource("6_8b1tk")
 
 [node name="यButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
 text = "य"
-script = ExtResource("6_8b1tk")
 
 [node name="रButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer3"]
 layout_mode = 2
 text = "र"
-script = ExtResource("6_8b1tk")
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
 layout_mode = 2
@@ -360,47 +305,38 @@ alignment = 1
 [node name="लButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
 text = "ल"
-script = ExtResource("6_8b1tk")
 
 [node name="वButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
 text = "व"
-script = ExtResource("6_8b1tk")
 
 [node name="शButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
 text = "श"
-script = ExtResource("6_8b1tk")
 
 [node name="षButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
 text = "ष"
-script = ExtResource("6_8b1tk")
 
 [node name="सButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
 text = "स"
-script = ExtResource("6_8b1tk")
 
 [node name="हButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
 text = "ह"
-script = ExtResource("6_8b1tk")
 
 [node name="क्षButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
 text = "क्ष"
-script = ExtResource("6_8b1tk")
 
 [node name="त्रButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
 text = "त्र"
-script = ExtResource("6_8b1tk")
 
 [node name="ज्ञButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer4"]
 layout_mode = 2
 text = "ज्ञ"
-script = ExtResource("6_8b1tk")
 
 [node name="HBoxContainer5" type="HBoxContainer" parent="MainControl/ConsonantsControl/ConsonantsVBox"]
 layout_mode = 2
@@ -410,7 +346,6 @@ alignment = 1
 [node name="श्रButton" type="Button" parent="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer5"]
 layout_mode = 2
 text = "श्र"
-script = ExtResource("6_8b1tk")
 
 [node name="ConsonantsLabel" type="Label" parent="MainControl/ConsonantsControl"]
 layout_mode = 0
@@ -458,7 +393,6 @@ offset_right = 403.0
 offset_bottom = 131.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("10_mqnc5")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MainControl/VowelControl/ConsonantsVBox"]
 layout_mode = 2
@@ -594,4 +528,3 @@ theme = SubResource("Theme_7ox4r")
 [connection signal="pressed" from="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2/अ_Button" to="SoundManager" method="_on_अ_button_pressed"]
 [connection signal="pressed" from="MainControl/VowelControl/ConsonantsVBox/HBoxContainer2/ऋButton" to="SoundManager" method="_on_ऋbutton_pressed"]
 [connection signal="pressed" from="MainControl/VowelControl/LeftButton" to="." method="_on_left_button_pressed"]
-[connection signal="pressed" from="MainControl/VowelControl/LeftButton" to="MainControl/VowelControl/ConsonantsVBox" method="_on_left_button_pressed"]
