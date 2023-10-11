@@ -5,6 +5,7 @@ var random_position_modifiers = []
 var right_button_random_mod = Vector2()
 @onready var left_button = $"../LeftButton"
 var has_switched = false
+@onready var whoosh_sound = $"../../WhooshSound"
 
 
 func _ready():
@@ -24,6 +25,7 @@ func _ready():
 
 
 func _on_right_button_pressed():
+	whoosh_sound.play()
 	var i = 0
 	if has_switched:
 		for button in buttons:

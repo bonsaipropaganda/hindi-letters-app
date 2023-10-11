@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dpmn7unl1x0wy"]
+[gd_scene load_steps=29 format=3 uid="uid://dpmn7unl1x0wy"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_3jo4y"]
 [ext_resource type="Texture2D" uid="uid://bv6a1w87d3sqo" path="res://rm222-mind-14.jpg" id="1_fmdpg"]
@@ -9,7 +9,10 @@
 [ext_resource type="Script" path="res://consonants_vbox.gd" id="4_pfplb"]
 [ext_resource type="Texture2D" uid="uid://buw4tqrvs7cl5" path="res://button_pressed.png" id="5_nkw0o"]
 [ext_resource type="Script" path="res://button.gd" id="6_8b1tk"]
+[ext_resource type="Script" path="res://consonants_label.gd" id="7_j67u7"]
 [ext_resource type="Script" path="res://vowels_vbox.gd" id="10_mqnc5"]
+[ext_resource type="AudioStream" uid="uid://bs67qxya5x8gl" path="res://audio/whoosh.wav" id="11_2fmln"]
+[ext_resource type="AudioStream" uid="uid://bxwn1vkrsh4po" path="res://audio/bubble-pop-6395.mp3" id="12_jtj2p"]
 
 [sub_resource type="Animation" id="Animation_nt8ix"]
 length = 0.001
@@ -24,6 +27,28 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainControl/ConsonantsControl/ConsonantsLabel:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainControl/ConsonantsControl/ConsonantsLabel:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="Animation" id="Animation_rujen"]
@@ -104,9 +129,36 @@ tracks/2/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_2gvfh"]
+resource_name = "start"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainControl/ConsonantsControl/ConsonantsLabel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-409, -0.25, 0, 0.25, 0, -186, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainControl/ConsonantsControl/ConsonantsLabel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-69, -0.25, 0, 0.25, 0, 40, -0.4, 25, 0.4, 6.00003, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wwmjy"]
 _data = {
 "RESET": SubResource("Animation_nt8ix"),
+"start": SubResource("Animation_2gvfh"),
 "switch_to_consonants": SubResource("Animation_rujen"),
 "switch_to_vowels": SubResource("Animation_dpm18")
 }
@@ -415,12 +467,13 @@ script = ExtResource("6_8b1tk")
 [node name="ConsonantsLabel" type="Label" parent="MainControl/ConsonantsControl"]
 layout_mode = 0
 offset_right = 1028.0
-offset_bottom = 105.0
+offset_bottom = 136.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "CONSONANTS"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("7_j67u7")
 
 [node name="RightButton" type="Button" parent="MainControl/ConsonantsControl"]
 layout_mode = 1
@@ -540,6 +593,14 @@ offset_right = 46.0
 offset_bottom = 243.0
 scale = Vector2(11, 11)
 theme = SubResource("Theme_7ox4r")
+
+[node name="WhooshSound" type="AudioStreamPlayer2D" parent="MainControl"]
+position = Vector2(1027, 268)
+stream = ExtResource("11_2fmln")
+volume_db = -10.0
+
+[node name="Bubbles" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_jtj2p")
 
 [connection signal="pressed" from="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer/कButton" to="SoundManager" method="_on_कbutton_pressed"]
 [connection signal="pressed" from="MainControl/ConsonantsControl/ConsonantsVBox/HBoxContainer/खButton" to="SoundManager" method="_on_खbutton_pressed"]
