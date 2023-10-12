@@ -21,6 +21,13 @@ func _ready():
 #	for button in buttons:
 #		button.position += random_position_modifiers[i]
 #		i += 1
+	
+	var left_tween = get_tree().create_tween()
+	left_tween.tween_property(left_button,"scale",Vector2(0,0),.1)
+	for button in buttons:
+		var tween = get_tree().create_tween()
+		tween.tween_property(button,"scale",Vector2(0,0),.1)
+
 
 
 
@@ -62,4 +69,11 @@ func reset_consonants():
 		var right_scale = get_tree().create_tween()
 		right_scale.tween_property(left_button,"scale",Vector2(11,11),.8)
 		right_button_random_mod = Vector2(randi_range(-100,100),randi_range(-100,100))
+	
+	else:
+		var left_scale = get_tree().create_tween()
+		left_scale.tween_property(left_button,"scale",Vector2(11,11),.8)
+		for button in buttons:
+			var tween = get_tree().create_tween()
+			tween.tween_property(button, "scale", Vector2(1,1),randf_range(.2,2.0))
 	has_switched = true
