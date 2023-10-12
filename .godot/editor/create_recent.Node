@@ -1,3 +1,7 @@
+AnimationPlayer
+Label
+HBoxContainer
+Sprite2D
 Camera2D
 AudioStreamPlayer
 AudioStreamPlayer2D

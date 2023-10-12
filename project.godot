@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Hindi-letters"
-run/main_scene="res://main.tscn"
+run/main_scene="res://loading_scene.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
-boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 1)
+boot_splash/bg_color=Color(0.796875, 0.917969, 0.988281, 1)
+boot_splash/image="res://loading.png"
 config/icon="res://icon.svg"
 
 [display]

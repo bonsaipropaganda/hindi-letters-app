@@ -1,0 +1,149 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfg4evj37m1l1"]
+
+[ext_resource type="Script" path="res://loading_scene.gd" id="1_6v1b3"]
+[ext_resource type="Texture2D" uid="uid://bv6a1w87d3sqo" path="res://rm222-mind-14.jpg" id="2_8ruhy"]
+
+[sub_resource type="Animation" id="Animation_o0stt"]
+resource_name = "loading"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(607, 258), Vector2(607, 250), Vector2(607, 258)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dot2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(622, 258), Vector2(622, 250), Vector2(622, 258)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dot3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(637, 258), Vector2(637, 250), Vector2(637, 258)]
+}
+
+[sub_resource type="Animation" id="Animation_qabrd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dot:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(607, 258)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dot2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(622, 258)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dot3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(637, 258)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j3tfy"]
+_data = {
+"RESET": SubResource("Animation_qabrd"),
+"loading": SubResource("Animation_o0stt")
+}
+
+[node name="LoadingScene" type="Node2D"]
+script = ExtResource("1_6v1b3")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(519, 306)
+rotation = 1.5708
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("2_8ruhy")
+
+[node name="LoadingLabel" type="Label" parent="."]
+offset_right = 1028.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "LOADING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j3tfy")
+}
+
+[node name="Dot" type="Label" parent="."]
+offset_left = 607.0
+offset_top = 258.0
+offset_right = 618.0
+offset_bottom = 316.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = ".
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dot2" type="Label" parent="."]
+offset_left = 622.0
+offset_top = 258.0
+offset_right = 633.0
+offset_bottom = 316.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = ".
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dot3" type="Label" parent="."]
+offset_left = 637.0
+offset_top = 258.0
+offset_right = 648.0
+offset_bottom = 316.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = ".
+"
+horizontal_alignment = 1
+vertical_alignment = 1
