@@ -25,6 +25,7 @@ func _ready():
 
 
 func _on_right_button_pressed():
+	left_button.disabled = true
 	whoosh_sound.play()
 	var i = 0
 	if has_switched:
@@ -42,6 +43,7 @@ func _on_right_button_pressed():
 	has_switched = true
 
 func reset_consonants():
+	left_button.disabled = false
 	var i = 0
 	if has_switched:
 		for button in buttons:

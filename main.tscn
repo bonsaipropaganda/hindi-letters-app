@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dpmn7unl1x0wy"]
+[gd_scene load_steps=31 format=3 uid="uid://dpmn7unl1x0wy"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_3jo4y"]
 [ext_resource type="Texture2D" uid="uid://bv6a1w87d3sqo" path="res://rm222-mind-14.jpg" id="1_fmdpg"]
@@ -49,6 +49,32 @@ tracks/2/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_2gvfh"]
+resource_name = "start"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainControl/ConsonantsControl/ConsonantsLabel:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-409, -0.25, 0, 0.25, 0, -186, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainControl/ConsonantsControl/ConsonantsLabel:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-69, -0.25, 0, 0.25, 0, 40, -0.4, 25, 0.4, 6.00003, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
 }
 
 [sub_resource type="Animation" id="Animation_rujen"]
@@ -129,32 +155,6 @@ tracks/2/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_2gvfh"]
-resource_name = "start"
-length = 2.0
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MainControl/ConsonantsControl/ConsonantsLabel:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-409, -0.25, 0, 0.25, 0, -186, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 2)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("MainControl/ConsonantsControl/ConsonantsLabel:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0),
-"points": PackedFloat32Array(-69, -0.25, 0, 0.25, 0, 40, -0.4, 25, 0.4, 6.00003, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1, 2)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wwmjy"]
 _data = {
 "RESET": SubResource("Animation_nt8ix"),
@@ -162,6 +162,10 @@ _data = {
 "switch_to_consonants": SubResource("Animation_rujen"),
 "switch_to_vowels": SubResource("Animation_dpm18")
 }
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gd5we"]
+texture = ExtResource("3_76cuu")
+region_rect = Rect2(401, 972, 181, 190)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7gldn"]
 
@@ -182,10 +186,15 @@ expand_margin_bottom = 1.0
 region_rect = Rect2(363, 882, 164, 171)
 
 [sub_resource type="Theme" id="Theme_b354v"]
+Button/styles/disabled = SubResource("StyleBoxTexture_gd5we")
 Button/styles/focus = SubResource("StyleBoxEmpty_7gldn")
 Button/styles/hover = SubResource("StyleBoxTexture_u0mdt")
 Button/styles/normal = SubResource("StyleBoxTexture_v16x3")
 Button/styles/pressed = SubResource("StyleBoxTexture_6bdfv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtna7"]
+texture = ExtResource("3_76cuu")
+region_rect = Rect2(401, 1190, 181, 190)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ijp0h"]
 
@@ -206,6 +215,7 @@ expand_margin_bottom = 1.0
 region_rect = Rect2(363, 1079, 164, 172)
 
 [sub_resource type="Theme" id="Theme_7ox4r"]
+Button/styles/disabled = SubResource("StyleBoxTexture_gtna7")
 Button/styles/focus = SubResource("StyleBoxEmpty_ijp0h")
 Button/styles/hover = SubResource("StyleBoxTexture_ple54")
 Button/styles/normal = SubResource("StyleBoxTexture_62hfx")

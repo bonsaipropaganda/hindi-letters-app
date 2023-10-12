@@ -6,6 +6,8 @@ var right_button_random_mod = Vector2()
 @onready var right_button = $"../RightButton"
 @onready var whoosh_sound = $"../../WhooshSound"
 @onready var bubbles = $"../../../Bubbles"
+@onready var consonants_label = $"../ConsonantsLabel"
+
 
 
 
@@ -43,8 +45,12 @@ func _ready():
 
 
 
+
+
 func _on_right_button_pressed():
 	whoosh_sound.play()
+	consonants_label.position = Vector2(0,0)
+	right_button.disabled = true
 	var i = 0
 	for button in buttons:
 		var tween = get_tree().create_tween()
@@ -60,6 +66,7 @@ func _on_right_button_pressed():
 
 
 func reset_consonants():
+	right_button.disabled = false
 	var i = 0
 	for button in buttons:
 		var tween = get_tree().create_tween()
